@@ -1,0 +1,123 @@
+
+.casa-paszamine {
+    width: 100%;
+    height: 100%;
+}
+.casa-paszamine svg {
+    position: absolute;
+    z-index: 1;
+}
+.casa-paszamine .dayere {
+    position: absolute;
+    /* width: 930px;
+    height: 930px; */
+    background-color: transparent;
+    border-radius: 1000px;
+    border: 8px solid #F3C306;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    box-shadow: 0 0 100px .1px #f3c4069f , inset 0 0 100px .1px #f3c406a1;
+    z-index: 0;
+}
+
+.casa-paszamine img {
+    position: absolute;
+}
+
+.casa-paszamine .moshakhasat {
+    position: absolute;
+    z-index: 2;
+    width: 795px;
+    height: 609px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ 
+}
+
+.casa-paszamine .esm {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3vw;
+    line-height: 66px;
+    color: #F3DB06;
+}
+.casa-paszamine .khat {
+   width: 70%;
+   height: 5px;
+   margin-left: 15%;
+   background-color: #F3DB06;
+}
+.casa-paszamine .herfe {
+    width: 100%;
+    height: 100px;
+   
+}
+.casa-paszamine .herfe .matn {
+    position: absolute;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.9vw;
+    line-height: 75px;
+    color: #FFFFFF;
+    z-index: 1;
+}
+.casa-paszamine .herfe .saye {
+    position: absolute;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.7vw;
+    line-height: 75px;
+    color: #161616;
+    text-shadow:  .2px .2px 0px  rgba(255, 255, 255, 0.14);
+    z-index: 0;
+    margin: 20px 0 0 20px;
+}
+.casa-paszamine .joziat {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2vw;
+    color: #8F8F8F;
+}
+
+.casa-paszamine .descargar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+.casa-paszamine .descargar img {
+    position: relative;
+    width: 3vw;
+}
+.casa-paszamine .descargar p {
+    position: relative;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5vw;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.casa-paszamine .hesabha {
+    position: relative;
+    width: 20%;
+    height: 10%;
+    margin-left: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.casa-paszamine .hesabha a {
+    position: relative;
+    height: 100%;
+}
+
+.casa-paszamine .hesabha img {
+    position: relative;
+    height: 100%;
+}
