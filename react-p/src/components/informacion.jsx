@@ -11,7 +11,7 @@ function Informacion() {
                 <h1 >{idiomas.datosacademicos[appcontext.idioma]}</h1>
                 {idiomas.titulos.map((e,index)=> (
                     <>
-                    <h3 key={index}>2022-Madrid Tu carrera digital</h3>
+                    <h3 key={index}>{e.data}</h3>
                     <p key={index}>{e.nombre[appcontext.idioma]}</p>
                     {e.datos[appcontext.idioma].map((e,index)=> (<h2 key={index}>{e}</h2>))}
                     </>

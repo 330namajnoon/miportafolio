@@ -22,7 +22,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 2vw;
-    line-height: 57px;
+    line-height: 2vw;
     display: flex;
     align-items: center;
     color: #FFFFFF;
@@ -31,7 +31,7 @@
     font-style: normal;
     font-weight: 300;
     font-size: 1vw;
-    line-height: 33px;
+    line-height: 2vw;
     color: #FFFFFF;
     margin-top: 1vh;
 }
@@ -39,7 +39,7 @@
     font-style: normal;
     font-weight: 600;
     font-size: 1.8vw;
-    line-height: 45px;
+    line-height: 2vw;
     color: #F3DB06;
     margin-bottom: .5vh;
 }
@@ -47,7 +47,7 @@
     font-style: normal;
     font-weight: 300;
     font-size: 1.2vw;
-    line-height: 33px;
+    line-height: 2vw;
     color: #C1C1C1;
 }
 .informacion .idiomas-p {

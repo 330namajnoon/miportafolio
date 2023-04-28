@@ -9,6 +9,8 @@ function Habilidades() {
     const appcontext = useContext(Appcontext);
     const [porsentajes,setPorsentajes] = useState({
         javascript:1,
+        typescript:1,
+        angular:1,
         nodejs:1,
         reactjs:1,
         threejs:1,
@@ -25,9 +27,11 @@ function Habilidades() {
         <div className="habilidades-paszamine">
             <h1>{idiomas.habilidades[appcontext.idioma]}</h1>
             <div className="habilidades">
-                <Habilidad name="Javascript" porsentaje={porsentajes.java}/>
+                <Habilidad name="Javascript" porsentaje={porsentajes.javascript}/>
+                <Habilidad name="Typescript" porsentaje={porsentajes.typescript}/>
                 <Habilidad name="NodeJS" porsentaje={porsentajes.nodejs}/>
                 <Habilidad name="ReactJS" porsentaje={porsentajes.reactjs}/>
+                <Habilidad name="AngularJS" porsentaje={porsentajes.angular}/>
                 <Habilidad name="ThreeJS" porsentaje={porsentajes.threejs}/>
                 <Habilidad name="HTML" porsentaje={porsentajes.html}/>
                 <Habilidad name="CSS" porsentaje={porsentajes.css}/>
@@ -47,6 +51,8 @@ function Habilidades() {
             setPorsentajes(
                 {
                     javascript:95,
+                    typescript:90,
+                    angular:70,
                     nodejs:85,
                     reactjs:80,
                     threejs:80,
