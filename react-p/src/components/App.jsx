@@ -11,6 +11,7 @@ import Proyectos from "./Proyectos";
 import Contacto from "./Contacto";
 import idiomas from "../idiomas";
 import {io} from "socket.io-client";
+import Portfolify_API,{INITIAL_USER_DATA , } from "../portfolify_api";
 
 // const socket = io("https://hollow-outgoing-dragon.glitch.me");
 const socket = io("http://localhost:4000");
@@ -24,22 +25,43 @@ function App() {
         proyectos: <Proyectos/>,
         contacto: <Contacto/>
     }
+    const [loading,setLoading] = useState(true);
+    const [userData, setUserData] = useState(INITIAL_USER_DATA);
+    const [colors, setColors] = useState([]);
+    const [font, setFont] = useState("");
     const [size,setSize] = useState({w:window.innerWidth,h:window.innerHeight});
     const [page,setPage] = useState(<Casa />);
     const [idioma,setIdioma] = useState("ingles");
     useEffect(resize,[]);
-    return ( 
-        <AppContext.Provider value={{pageChenged,idioma,socket}} >
-            <div  className="paszamine">
-                <select onChange={(e)=> {setIdioma(e.target.value)}}>
-                    <option value="ingles">English</option>
-                    <option value="espanol">Español</option>
-                    {/* <option value="turco">Türkçe</option> */}
-                </select>
-                <Menu/>
-                {page}
-            </div>
-        </AppContext.Provider>
+    useEffect(()=> {
+        const portfolify = new Portfolify_API();
+        portfolify.getData(window.location.search.split("=")[1]).then((res)=> {
+            setUserData(portfolify.getUserData());
+            setColors(portfolify.getColors());
+            setFont(portfolify.getFont());
+            setLoading(false);
+        }).catch(res => {
+            console.log(res);
+        });
+
+    },[]);
+
+    return (
+        <>
+            {!loading ?
+                <AppContext.Provider value={{pageChenged,idioma,socket,userData,colors,font}} >
+                    <div  className="paszamine">
+                        {/* <select onChange={(e)=> {setIdioma(e.target.value)}}>
+                            <option value="ingles">English</option>
+                            <option value="espanol">Español</option>
+                        </select> */}
+                        <Menu/>
+                        {page}
+                    </div>
+                </AppContext.Provider>
+                : <h1>Loading</h1>
+            } 
+        </>
       
      );
 

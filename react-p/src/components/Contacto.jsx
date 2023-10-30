@@ -7,9 +7,13 @@ import email from "../images/mail.png";
 import direccion from "../images/location-marker.png";
 import enviar from "../images/Vector.png";
 import { useRef } from "react";
+import { INITIAL_USER_DATA } from "../portfolify_api";
 
 function Contacto() {
     const appcontext = useContext(Appcontext);
+    let userData = INITIAL_USER_DATA;
+    userData = appcontext.userData;
+    const {colors} = appcontext;
     const inputs= {
         nombre: useRef(),
         email:useRef(),
@@ -20,36 +24,35 @@ function Contacto() {
    
     
     return ( 
-        <div className="contacto-paszamine">
-            {console.log("sina")}
+        <div style={{backgroundColor: colors[4]+98}} className="contacto-paszamine">
             <div className="contacto">
-                <div className="datos">
-                    <h1>{idiomas.contacto[appcontext.idioma].toUpperCase()}<div></div></h1>
-                    <h3><img src={telefono} alt="" />+34 643 862 337</h3>
-                    <h3><img src={email} alt="" />sina.majnoonhjk@gmail.com</h3>
-                    <h3><img src={direccion} alt="" />Madrid , España</h3>
-                    <div></div>
+                <div style={{backgroundColor: colors[2]+90}} className="datos">
+                    <h1 style={{color: colors[3]}}>{idiomas.contacto[appcontext.idioma].toUpperCase()}<div style={{backgroundColor: colors[3]}}></div></h1>
+                    <h3 style={{color: colors[3]}}><img src={telefono} alt="" />+34 643 862 337</h3>
+                    <h3 style={{color: colors[3]}}><img src={email} alt="" />sina.majnoonhjk@gmail.com</h3>
+                    <h3 style={{color: colors[3]}}><img src={direccion} alt="" />Madrid , España</h3>
+                    <div style={{backgroundClip: colors[3]}}></div>
                 </div>
-                <div className="mensaje">
+                <div style={{backgroundColor: colors[2]+40}} className="mensaje">
                     <div className="d1">
                     <div className="input">
-                        <label>{idiomas.nombre[appcontext.idioma]}</label>
-                        <input ref={inputs.nombre}  className="ip1" type="text" />
+                        <label style={{color: colors[3]}}>{idiomas.nombre[appcontext.idioma]}</label>
+                        <input style={{color: colors[3], backgroundColor: colors[2]+80}} ref={inputs.nombre}  className="ip1" type="text" />
                     </div>
                     <div className="input">
-                        <label>{idiomas.email[appcontext.idioma]}</label>
-                        <input ref={inputs.email} className="ip2" type="text" />
+                        <label style={{color: colors[3]}}>{idiomas.email[appcontext.idioma]}</label>
+                        <input style={{color: colors[3], backgroundColor: colors[2]+80}} ref={inputs.email} className="ip2" type="text" />
                     </div>
                     </div>
                     <div className="input">
-                        <label>{idiomas.asunto[appcontext.idioma]}</label>
-                        <input ref={inputs.darbare} className="ip3" type="text" />
+                        <label style={{color: colors[3]}}>{idiomas.asunto[appcontext.idioma]}</label>
+                        <input style={{color: colors[3], backgroundColor: colors[2]+80}} ref={inputs.darbare} className="ip3" type="text" />
                     </div>
                     <div className="input">
-                        <label>{idiomas.mensaje[appcontext.idioma]}</label>
-                        <textarea ref={inputs.mensage}  className="ip4" name="" id="" ></textarea>
+                        <label style={{color: colors[3]}}>{idiomas.mensaje[appcontext.idioma]}</label>
+                        <textarea style={{color: colors[3], backgroundColor: colors[2]+80}} ref={inputs.mensage}  className="ip4" name="" id="" ></textarea>
                     </div>
-                    <a onClick={send} href="javascript:;"><img src={enviar} alt="" />{idiomas.enviar[appcontext.idioma]}</a>
+                    <a style={{color: colors[4], backgroundColor: colors[0]}} onClick={send} href="javascript:;"><img src={enviar} alt="" />{idiomas.enviar[appcontext.idioma]}</a>
                 </div>
             </div>
         </div>

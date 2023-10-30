@@ -9,6 +9,7 @@ import idiomas from "../idiomas";
 
 function Menu() {
     const appcontext = useContext(Appcontext);
+    const {colors} = appcontext;
     const [options,setOptions] = useState({
         casa: true,
         sobremi: false,
@@ -30,12 +31,12 @@ function Menu() {
                 <MenuOption name={idiomas.contacto[appcontext.idioma]} pageName="contacto" selected={options.contacto}/>
             </div>
             <div style={{top: `${(window.innerHeight / 2)- 60}px`,left: `${window.innerWidth - 46}px`}} className="menu-navarelaghzan">
-                <div style={{backgroundColor: options.casa === true ? "#F3DB06" : "transparent" , border: `solid 3px ${options.casa === true ? "#F3DB06" : "#ffffff" }`}}></div>
-                <div style={{backgroundColor: options.sobremi === true ? "#F3DB06" : "transparent" , border: `solid 3px ${options.sobremi === true ? "#F3DB06" : "#ffffff" }`}}></div>
-                <div style={{backgroundColor: options.habilidades === true ? "#F3DB06" : "transparent" , border: `solid 3px ${options.habilidades === true ? "#F3DB06" : "#ffffff" }`}}></div>
-                <div style={{backgroundColor: options.informacion === true ? "#F3DB06" : "transparent" , border: `solid 3px ${options.informacion === true ? "#F3DB06" : "#ffffff" }`}}></div>
-                <div style={{backgroundColor: options.proyectos === true ? "#F3DB06" : "transparent" , border: `solid 3px ${options.proyectos === true ? "#F3DB06" : "#ffffff" }`}}></div>
-                <div style={{backgroundColor: options.contacto === true ? "#F3DB06" : "transparent" , border: `solid 3px ${options.contacto === true ? "#F3DB06" : "#ffffff" }`}}></div>
+                <div style={{backgroundColor: options.casa === true ? colors[0] : "transparent" , border: `solid 3px ${options.casa === true ? colors[0] : colors[3] }`}}></div>
+                <div style={{backgroundColor: options.sobremi === true ? colors[0] : "transparent" , border: `solid 3px ${options.sobremi === true ? "#F3DB06" : "#ffffff" }`}}></div>
+                <div style={{backgroundColor: options.habilidades === true ? colors[0] : "transparent" , border: `solid 3px ${options.habilidades === true ? "#F3DB06" : "#ffffff" }`}}></div>
+                <div style={{backgroundColor: options.informacion === true ? colors[0] : "transparent" , border: `solid 3px ${options.informacion === true ? "#F3DB06" : "#ffffff" }`}}></div>
+                <div style={{backgroundColor: options.proyectos === true ? colors[0] : "transparent" , border: `solid 3px ${options.proyectos === true ? "#F3DB06" : "#ffffff" }`}}></div>
+                <div style={{backgroundColor: options.contacto === true ? colors[0] : "transparent" , border: `solid 3px ${options.contacto === true ? "#F3DB06" : "#ffffff" }`}}></div>
             </div>    
         </MenuContext.Provider>
      );
