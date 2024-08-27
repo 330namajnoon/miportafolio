@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.menu-paszamine {
+    position: absolute;
+    width: 60%;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    z-index: 1000;
+    
+}
+.menu-navarelaghzan {
+    width: 15px;
+    height: 150px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+.menu-navarelaghzan div {
+    width: .5vw;
+    height: .5vw;
+    border-radius: 10px;
+    transition: all .5s;
+   
+}
+.menu-paszamine a {
+    font-family: 'Signika Negative', sans-serif;;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4vw;
+    line-height: 30px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all .5s;
+    
+}
+.menuoption-paszamine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menuoption-paszamine div {
+    width: .4vw;
+    height: .4vw;
+    border-radius: 5px;
+    margin-top: 2px;
+    transition: all .5s;
+    
+}
