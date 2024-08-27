@@ -17,7 +17,7 @@ function Casa() {
     return ( 
         <div style={{height: `${window.innerHeight}px`}} className="casa-paszamine">
             <div style={{width: `${(window.innerWidth/2)}px`,height: `${(window.innerWidth/2)}px`,left: `${(window.innerWidth/2.6)}px`,top: `${(window.innerHeight-(window.innerHeight/1.4))}px`}} className="dayere"></div>
-            <img style={{height: `${(window.innerHeight/1.15)}px`,left: `${(window.innerWidth/2)}px`,top: `${(window.innerHeight-(window.innerHeight/1.15))}px`}} src={sina} alt="" />
+            <img style={{height: `${(window.innerHeight/1.15)}px`,left: `${(window.innerWidth/2)}px`,top: `${(window.innerHeight-(window.innerHeight/1.15))}px`}} src={"./images/sina.png"} alt="" />
             <svg  width={window.innerWidth} height={window.innerHeight}>
                 <polygon  style={{fill:"#161616"}} points={`0,0 ${(window.innerWidth/2.7)},0 ${(window.innerWidth/1.6)},${window.innerHeight} 0,${window.innerHeight}`}  />
             </svg>
